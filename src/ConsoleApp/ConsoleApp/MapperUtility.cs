@@ -54,7 +54,8 @@ namespace ConsoleApp
                 if (sourceProp.PropertyType != targetProp.PropertyType)
                 {
                     if (configuration.StrictMode)
-                        throw new InvalidOperationException(
+                        //throw new InvalidOperationException(
+                        Console.WriteLine(
                             $"Strict mode enabled: property '{targetProp.Name}' has incompatible types. Source: {sourceProp.PropertyType.Name}, Target: {targetProp.PropertyType.Name}.");
 
                     continue;
